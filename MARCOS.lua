@@ -163,8 +163,8 @@ io.popen("mkdir File_Bot")
 io.popen("cd File_Bot && rm -rf games.lua.1") 
 io.popen("cd File_Bot && rm -rf games.lua.2") 
 io.popen("cd File_Bot && rm -rf games.lua.3") 
-io.popen("cd File_Bot && wget https://raw.githubusercontent.com/MARCOSBOT1/Files_MARCOS/master/File_Bot/games.lua") 
-io.popen("cd File_Bot && wget https://raw.githubusercontent.com/MARCOSBOT1/Files_MARCOS/master/File_Bot/Reply.lua") 
+io.popen("cd File_Bot && wget https://raw.githubusercontent.com/M3RCOS/FILES/master/games.lua") 
+io.popen("cd File_Bot && wget https://raw.githubusercontent.com/M3RCOS/FILES/master/Reply.lua") 
 t = "\27[35m".."\nAll Files Started : \n____________________\n"..'\27[m'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
@@ -935,7 +935,7 @@ send(msg.chat_id_, msg.id_,'⌯┇ اهلا عزيزى مطور اساسي \n⌯
 end
 if text == 'تحديث السورس ™' and SudoBot(msg) then 
 os.execute('rm -rf MARCOS.lua')
-os.execute('wget https://raw.githubusercontent.com/MARCOSBOT1/MARCOS/master/MARCOS.lua')
+os.execute('wget https://raw.githubusercontent.com/M3RCOS/MARCOS/master/MARCOS.lua')
 send(msg.chat_id_, msg.id_,'⌯┇ تم تحديث البوت \n⌯┇ لديك اخر اصدار سورس ماركوس\n⌯┇ الاصدار ← { 1.3v}')
 dofile('MARCOS.lua')  
 end
@@ -2122,7 +2122,7 @@ end
 return false
 end
 os.execute('rm -rf MARCOS.lua')
-os.execute('wget https://raw.githubusercontent.com/MARCOSBOT1/MARCOS/master/MARCOS.lua')
+os.execute('wget https://raw.githubusercontent.com/M3RCOS/MARCOS/master/MARCOS.lua')
 send(msg.chat_id_, msg.id_,'⌯┇ تم تحديث البوت \n⌯┇ لديك اخر اصدار سورس ماركوس\n⌯┇ الاصدار ← { 1.3v}')
 dofile('MARCOS.lua')  
 end
@@ -3152,7 +3152,7 @@ send(msg.chat_id_, msg.id_,t)
 end
 if text == "" or text == '' then
 if SudoBot(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/MARCOSBOT1/Files_MARCOS/master/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/M3RCOS/FILES/master/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
@@ -3190,7 +3190,7 @@ t = "⌯┇ الملف ← "..file.."\n⌯┇ تم تعطيل ملف \n"
 else
 t = "⌯┇ بالتاكيد تم تعطيل ملف → "..file.."\n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/MARCOSBOT1/Files_MARCOS/master/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/M3RCOS/FILES/master/File_Bot/"..file)
 if res == 200 then
 os.execute("rm -fr File_Bot/"..file)
 send(msg.chat_id_, msg.id_,t) 
@@ -3210,7 +3210,7 @@ t = "⌯┇ بالتاكيد تم تحديث ملف → "..file.." \n"
 else
 t = "⌯┇ الملف ← "..file.."\n⌯┇ تم تحديث ملف \n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/MARCOSBOT1/Files_MARCOS/master/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/M3RCOS/FILES/master/File_Bot/"..file)
 if res == 200 then
 local chek = io.open("File_Bot/"..file,'w+')
 chek:write(json_file)
