@@ -2,35 +2,22 @@
 cd $HOME/MARCOS
 install() {
 rm -rf $HOME/.telegram-cli
-apt update
-apt upgrade
 sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
-sudo apt-get install tmux
-wget http://luarocks.org/releases/luarocks-2.2.2.tar.gz;tar zxpf luarocks-2.2.2.tar.gz;cd luarocks-2.2.2 && ./cconfigure
 sudo luarocks install luasocket
-sudo apt-get install screen
 sudo luarocks install luasec
 sudo luarocks install redis-lua
 sudo luarocks install Lua-cURL
 sudo service redis-server start
-sudo make bootstrap
 sudo apt-get update -y
-sudo apt-get install
-sudo apt-get install upstart-sysv
 sudo apt-get install g++-4.7 -y c++-4.7
 sudo apt-get install libreadline-dev -y libconfig-dev -y libssl-dev -y lua5.2 -y liblua5.2-dev -y lua-socket -y lua-sec -y lua-expat -y libevent-dev -y make unzip git redis-server autoconf g++ -y libjansson-dev -y libpython-dev -y expat libexpat1-dev -y curl -y htop -y
 sudo apt-get install screen -y
 sudo apt-get install libstdc++6 -y
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y 
-sudo apt-get install lua-lgi -y  
-sudo apt-get install libconfig++9v5 -y 
+sudo apt-get install lua-lgi -y
 sudo apt-get install libnotify-dev -y
-sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev lua-socket lua-sec lua-expat libevent-dev make unzip git redis-server autoconf g++ libjansson-dev libpython-dev expat libexpat1-dev -y
-sudo apt-get update 
-sudo apt-get upgrade -y
 sudo chmod +x tg
 lua MARCOS.lua
 sudo chmod +x MARCOS
