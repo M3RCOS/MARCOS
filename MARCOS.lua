@@ -10334,7 +10334,7 @@ if text and text:match("^احسب (.*)$") and database:get(bot_id.."MA:age_Bots"
 local Textage = text:match("^احسب (.*)$")
 ge = https.request('https://xmzzm9.ml/MaRcoS/Age.php?age='..URL.escape(Textage)..'')
 ag = JSON.decode(ge)
-send(msg.chat_id_, msg.id_, ag.ok.hso)
+send(msg.chat_id_, msg.id_, ag)
 end
 if text == "تعطيل الزخرفه" and Manager(msg) then
 send(msg.chat_id_, msg.id_, '⌯┇تم تعطيل الزخرفه')
