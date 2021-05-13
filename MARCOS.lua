@@ -10332,7 +10332,7 @@ database:set(bot_id.."MA:age_Bots"..msg.chat_id_,"open")
 end
 if text and text:match("^احسب (.*)$") and database:get(bot_id.."MA:age_Bots"..msg.chat_id_) == "open" then
 local Textage = text:match("^احسب (.*)$")
-ge = https.request('https://xmzzm9.ml/MaRcoS/Age.php?text='..text..'')
+ge = https.request('https://xmzzm9.ml/MaRcoS/Age.php?age='..URL.escape(Textage)..'')
 ag = JSON.decode(ge)
 send(msg.chat_id_, msg.id_, ag.ok.hso)
 end
