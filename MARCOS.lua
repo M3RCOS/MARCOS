@@ -10308,11 +10308,11 @@ send(msg.chat_id_, msg.id_,t)
 return false
 end
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-if text == "تعطيل الزخرفه" and Owner(msg) then
+if text == "تعطيل الزخرفه" and Manager(msg) then
 send(msg.chat_id_, msg.id_, '⌯┇تم تعطيل الزخرفه')
 database:set(bot_id.."zhrf_Bots"..msg.chat_id_,"close")
 end
-if text == "تفعيل الزخرفه" and Owner(msg) then
+if text == "تفعيل الزخرفه" and Manager(msg) then
 send(msg.chat_id_, msg.id_,'⌯┇تم تفعيل الزخرفه')
 database:set(bot_id.."zhrf_Bots"..msg.chat_id_,"open")
 end
@@ -10328,11 +10328,11 @@ t = t..i.."-  `"..v.."` \n"
 end
 send(msg.chat_id_, msg.id_, t..' ⚡— — — — — — — — —⚡\n⌯┇[🔥🌐 𝐂𝐡𝐚𝐚𝐧𝐞𝐥 𝐌𝐚𝐑𝐜𝐨𝐒 🦅](t.me/THE_M3RK)')
 end
-if text == "تعطيل الابراج" and Owner(msg) then
+if text == "تعطيل الابراج" and Manager(msg) then
 send(msg.chat_id_, msg.id_, '⌯┇تم تعطيل الابراج')
 database:set(bot_id.."brj_Bots"..msg.chat_id_,"close")
 end
-if text == "تفعيل الابراج" and Owner(msg) then
+if text == "تفعيل الابراج" and Manager(msg) then
 send(msg.chat_id_, msg.id_,'⌯┇تم تفعيل الابراج')
 database:set(bot_id.."brj_Bots"..msg.chat_id_,"open")
 end
@@ -10342,11 +10342,11 @@ gk = https.request('https://boyka-api.ml/Horoscopes.php?br='..URL.escape(Textbrj
 br = JSON.decode(gk)
 send(msg.chat_id_, msg.id_, br.ok.hso)
 end
-if text == "تعطيل حساب العمر" and Owner(msg) then
+if text == "تعطيل حساب العمر" and Manager(msg) then
 send(msg.chat_id_, msg.id_, '⌯┇تم تعطيل حساب العمر')
 database:set(bot_id.."age_Bots"..msg.chat_id_,"close")
 end
-if text == "تفعيل حساب العمر" and Owner(msg) then
+if text == "تفعيل حساب العمر" and Manager(msg) then
 send(msg.chat_id_, msg.id_,'⌯┇تم تفعيل حساب العمر')
 database:set(bot_id.."age_Bots"..msg.chat_id_,"open")
 end
