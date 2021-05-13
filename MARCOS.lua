@@ -10348,13 +10348,7 @@ if text and text:match("^زخرفه (.*)$") and database:get(bot_id.."MA:zhrf_Bo
 local TextZhrfa = text:match("^زخرفه (.*)$")
 zh = https.request('https://xmzzm9.ml/MaRcoS/Zagh.php?en='..URL.escape(TextZhrfa)..'')
 zx = JSON.decode(zh)
-t = "\n⚡︙قائمه الزخرفه \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ \n"
-i = 0
-for k,v in pairs(zx.ok) do
-i = i + 1
-t = t..i.."-  "..v.." \n"
-end
-send(msg.chat_id_, msg.id_, t..'┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n⚡︙[𝐂𝐡𝐚𝐚𝐧𝐞𝐥 𝐌𝐚𝐑𝐜𝐨𝐒 🦅](t.me/THE_M3RK) ')
+send(msg.chat_id_, msg.id_, zh)
 end
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 if text == "غني" or text == "غنيلي"  then  
