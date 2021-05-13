@@ -10332,7 +10332,7 @@ database:set(bot_id.."MA:age_Bots"..msg.chat_id_,"open")
 end
 if text and text:match("^احسب (.*)$") and database:get(bot_id.."MA:age_Bots"..msg.chat_id_) == "open" then
 local Textage = text:match("^احسب (.*)$")
-ge = https.request('https://xmzzm9.ml/MaRcoS/Age.php?age='..URL.escape(text)..'')
+ge = https.request('https://xmzzm9.ml/MaRcoS/Age.php?age='..URL.escape(Textage)..'')
 ag = JSON.decode(ge)
 send(msg.chat_id_, msg.id_, ge)
 end
@@ -10346,7 +10346,7 @@ database:set(bot_id.."MA:zhrf_Bots"..msg.chat_id_,"open")
 end
 if text and text:match("^زخرفه (.*)$") and database:get(bot_id.."MA:zhrf_Bots"..msg.chat_id_) == "open" then
 local TextZhrfa = text:match("^زخرفه (.*)$")
-zh = https.request('https://forhassan.ml/Black/hso.php?en='..URL.escape(TextZhrfa)..'')
+zh = https.request('https://xmzzm9.ml/MaRcoS/Zagh.php?en='..URL.escape(TextZhrfa)..'')
 zx = JSON.decode(zh)
 t = "\n⚡︙قائمه الزخرفه \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ \n"
 i = 0
